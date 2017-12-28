@@ -1,0 +1,28 @@
+C:\Users\cengiz\source\repos\Cafe\Cafe\bin\Release\Cafe.exe.config
+C:\Users\cengiz\source\repos\Cafe\Cafe\bin\Release\Cafe.exe
+C:\Users\cengiz\source\repos\Cafe\Cafe\bin\Release\Cafe.pdb
+C:\Users\cengiz\source\repos\Cafe\Cafe\bin\Release\System.Configuration.dll
+C:\Users\cengiz\source\repos\Cafe\Cafe\obj\Release\Cafe.ConnectionParameters.resources
+C:\Users\cengiz\source\repos\Cafe\Cafe\obj\Release\Cafe.CustomButton.resources
+C:\Users\cengiz\source\repos\Cafe\Cafe\obj\Release\Cafe.frmMasa.resources
+C:\Users\cengiz\source\repos\Cafe\Cafe\obj\Release\Cafe.frmAdisyon.resources
+C:\Users\cengiz\source\repos\Cafe\Cafe\obj\Release\Cafe.MessageBoxForm.resources
+C:\Users\cengiz\source\repos\Cafe\Cafe\obj\Release\Cafe.Properties.Resources.resources
+C:\Users\cengiz\source\repos\Cafe\Cafe\obj\Release\Cafe.csproj.GenerateResource.Cache
+C:\Users\cengiz\source\repos\Cafe\Cafe\obj\Release\Cafe.csproj.CoreCompileInputs.cache
+C:\Users\cengiz\source\repos\Cafe\Cafe\obj\Release\Cafe.exe
+C:\Users\cengiz\source\repos\Cafe\Cafe\obj\Release\Cafe.pdb
+D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\Cafe\bin\Release\Cafe.exe.config
+D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\Cafe\bin\Release\Cafe.exe
+D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\Cafe\bin\Release\Cafe.pdb
+D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\Cafe\bin\Release\System.Configuration.dll
+D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\Cafe\obj\Release\Cafe.ConnectionParameters.resources
+D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\Cafe\obj\Release\Cafe.CustomButton.resources
+D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\Cafe\obj\Release\Cafe.frmMasa.resources
+D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\Cafe\obj\Release\Cafe.frmAdisyon.resources
+D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\Cafe\obj\Release\Cafe.MessageBoxForm.resources
+D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\Cafe\obj\Release\Cafe.Properties.Resources.resources
+D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\Cafe\obj\Release\Cafe.csproj.GenerateResource.Cache
+D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\Cafe\obj\Release\Cafe.csproj.CoreCompileInputs.cache
+D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\Cafe\obj\Release\Cafe.exe
+D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\Cafe\obj\Release\Cafe.pdb

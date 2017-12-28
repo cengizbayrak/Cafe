@@ -1,0 +1,1 @@
+localhost\sqlexpress2005|bdy_cafe|sa|1453
