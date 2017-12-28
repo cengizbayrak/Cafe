@@ -322,7 +322,6 @@
             this.Name = "frmAdisyon";
             this.Text = "Form2";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.frmAdisyon_Load);
             this.pnl.ResumeLayout(false);
             this.pnl.PerformLayout();
             this.ResumeLayout(false);

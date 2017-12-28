@@ -1,5 +1,9 @@
 ﻿using System;
+using System.Data.SqlClient;
 using System.Diagnostics;
+using System.Drawing;
+using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Cafe {
@@ -54,13 +58,18 @@ namespace Cafe {
             btnSekiz.Tag = buttonValue.sekiz;
             btnDokuz.Tag = buttonValue.dokuz;
             btnSil.Tag = buttonValue.sil;
-        }
 
-        public frmAdisyon(int masa) : this() {
-            this.masa = masa;
-        }
+            Opacity = 0.0;
 
-        private void frmAdisyon_Load(object sender, EventArgs e) {
+            Util.Animation animation = new Util.Animation();
+            Load += (s, e) => {
+                StartPosition = FormStartPosition.CenterParent;
+                animation.fadeIn(this, 1500, 100, Opacity, 1.0, false, false);
+            };
+            FormClosing += (s, e) => {
+                animation.fadeOut(this, 1500, 100, Opacity, 0.0, false);
+            };
+
             txtAdisyon.KeyPress += (tas, tae) => {
                 tae.Handled = !char.IsDigit(tae.KeyChar) && !char.IsControl(tae.KeyChar);
             };
@@ -92,6 +101,10 @@ namespace Cafe {
             tip.SetToolTip(btnSil, "Sil");
         }
 
+        public frmAdisyon(int masa) : this() {
+            this.masa = masa;
+        }
+
         private void btnNumber_Click(object sender, EventArgs e) {
             Button btn = sender as Button;
             buttonValue val = (buttonValue)btn.Tag;
@@ -118,16 +131,87 @@ namespace Cafe {
                 return;
             }
             if (adisyon == 1453) {
+                txtAdisyon.Clear();
                 Application.Exit();
+                return;
             } else if (adisyon == 1454) {
+                txtAdisyon.Clear();
                 var frm = new ConnectionParameters();
                 frm.ShowDialog();
                 return;
+            } else if (adisyon == 1455) {
+                txtAdisyon.Clear();
+                string log = Util.Logger.read();
+                var txt = new RichTextBox();
+                txt.Text = log;
+                txt.ReadOnly = true;
+                txt.ScrollBars = RichTextBoxScrollBars.ForcedBoth;
+                txt.Dock = DockStyle.Fill;
+                if (!string.IsNullOrWhiteSpace(txt.Text)) {
+                    txt.Select(txt.Text.Length - 1, 0);
+                }
+                var frm = new Form();
+                frm.Text = "Log";
+                frm.StartPosition = FormStartPosition.CenterParent;
+                frm.FormBorderStyle = FormBorderStyle.FixedToolWindow;
+                frm.Controls.Add(txt);
+                frm.KeyPreview = true;
+                frm.KeyPress += (fs, fe) => {
+                    if (fe.KeyChar == (char)Keys.Escape) {
+                        frm.Close();
+                    }
+                };
+                frm.ShowDialog();
+                return;
             }
-            Opacity = 0;
-            Close();
-            string text = string.Format(adisyonIslenmis, adisyon);
-            new MessageBoxForm(text).ShowDialog();
+
+            SqlConnection connection = Util.Connection.getConnection();
+            if (connection == null) {
+                string message = "Veri tabanı bağlantısı sağlanamadı!";
+                new MessageBoxForm(message).ShowDialog();
+                return;
+            }
+            using (connection) {
+                string sql = @"IF NOT EXISTS(SELECT * FROM AdditionTable WHERE AdditionNumber = " + adisyon + " AND DATEADD(DAY, 0, DATEDIFF(DAY, 0, MatchDate)) = DATEADD(DAY, 0, DATEDIFF(DAY, 0, GETDATE()))) " +
+                            "BEGIN; " +
+                            "INSERT INTO AdditionTable(AdditionNumber,TableNumber,MatchDate) VALUES(" + adisyon + "," + masa + ",GETDATE()) ;" +
+                            "END; ";
+                try {
+                    connection.Open();
+                    SqlCommand command = new SqlCommand(sql, connection);
+                    bool inserted = command.ExecuteNonQuery() > 0;
+                    connection.Close();
+                    String message = string.Format(adisyonIslenmis, adisyon);
+                    if (inserted) {
+                        string enter = Environment.NewLine;
+                        message = string.Format("{0} nolu adisyon, {1} nolu masa bilginiz iletildi. Siparişiniz masanıza gelecektir." + enter + "Afiyet olsun.", adisyon, masa);
+                        var timer = new System.Windows.Forms.Timer() {
+                            Interval = 3000
+                        };
+                        try {
+                            NotifyIcon notify = new NotifyIcon() {
+                                Icon = new Icon(Icon, 40, 40),
+                                Visible = true,
+                                Text = "Adisyon ve masa bilginiz iletildi. Afiyet olsun.",
+                                BalloonTipTitle = "Cafe Arjantin",
+                                BalloonTipText = "Adisyon ve masa bilginiz iletildi. Afiyet olsun.",
+                                BalloonTipIcon = ToolTipIcon.Info
+                            };
+                            notify.ShowBalloonTip(2000);
+                        } catch (Exception ex) {
+                            Util.Logger.log(ex.Message);
+                        }
+                    }
+                    if (inserted) {
+                        Close();
+                    }
+                    new MessageBoxForm(message).ShowDialog();
+                } catch (Exception ex) {
+                    string enter = Environment.NewLine;
+                    new MessageBoxForm("Veri tabanı hatası sonucu işlem gerçekleştirilemedi!" + enter + enter + "Hata kodu: 101").ShowDialog();
+                    Util.Logger.log(ex.Message);
+                }
+            }
         }
     }
 }

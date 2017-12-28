@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 
@@ -12,12 +15,18 @@ namespace Cafe {
             InitializeComponent();
 
             setupConnectionSettings();
-        }
 
-        private void frmMasa_Load(object sender, EventArgs e) {
-            FormClosing += (fcs, fce) => open = false;
+            Opacity = 0.0;
 
-            setupLayout();
+            Util.Animation animation = new Util.Animation();
+            Load += (s, e) => {
+                setupLayout();
+                animation.fadeIn(this, 1500, 100, Opacity, 1.0, false, false);
+            };
+            FormClosing += (s, e) => {
+                open = false;
+                animation.fadeOut(this, 1500, 100, Opacity, 0.0, false);
+            };
         }
 
         private void setupConnectionSettings() {
@@ -62,7 +71,7 @@ namespace Cafe {
                         using (SqlConnection connection = Util.Connection.getConnection()) {
                             connection.Open();
                             if (connection.State != System.Data.ConnectionState.Open) {
-
+                                MessageBox.Show("Veri tabanı bağlantısı sağlanamadı! Lütfen ayarları kontrol edin!", appName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             }
                         }
                     } catch (Exception ex) {
@@ -82,6 +91,7 @@ namespace Cafe {
         private void setupLayout() {
             var rows = int.Parse(Util.AppSettings.getValue(Util.AppSettings.Key.rows));
             var columns = int.Parse(Util.AppSettings.getValue(Util.AppSettings.Key.columns));
+            var tables = int.Parse(Util.AppSettings.getValue(Util.AppSettings.Key.tables));
 
             table.RowCount = rows;
             table.ColumnCount = columns;
@@ -97,17 +107,33 @@ namespace Cafe {
                 table.RowStyles.Add(new RowStyle(SizeType.Percent, 100 / rows));
             }
 
+            var workingArea = Screen.PrimaryScreen.WorkingArea;
+            //var workingArea = Screen.AllScreens[1].WorkingArea;
+
+            var cells = rows * columns;
+            var size = (workingArea.Width * workingArea.Height) / (cells);
+            var dimen = Math.Sqrt(size);
+            int side = (int)Math.Ceiling(dimen);
+            side -= 1;
+
             for (int i = 0; i < rows * columns; i++) {
-                var btn = new CustomButton((i + 1).ToString(), (s, e) => {
-                    Button b = s as Button;
-                    int masa = int.Parse(b.Text);
-                    var frm = new frmAdisyon(masa);
-                    Opacity = .9;
-                    frm.ShowDialog();
-                    if (open) {
-                        Opacity = 1;
-                    }
-                });
+                if (i >= tables) {
+                    break;
+                }
+                var btn = new CustomButton((i + 1).ToString(),
+                    (s, e) => {
+                        Button b = s as Button;
+                        int masa = int.Parse(b.Text);
+                        var frm = new frmAdisyon(masa);
+                        Util.Animation animation = new Util.Animation();
+                        animation.fadeOut(this, 2500, 100, 1.0, 0.85, false);
+                        frm.ShowDialog();
+                        if (open) {
+                            animation.fadeIn(this, 2500, 100, Opacity, 1.0, false, false);
+                        }
+                    });
+                btn.Width = side;
+                btn.Height = side;
                 table.Controls.Add(btn);
             }
         }

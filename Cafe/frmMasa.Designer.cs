@@ -66,9 +66,8 @@
             this.Controls.Add(this.table);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmMasa";
-            this.Text = "Form1";
+            this.Text = "Cafe";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.frmMasa_Load);
             this.ResumeLayout(false);
 
         }

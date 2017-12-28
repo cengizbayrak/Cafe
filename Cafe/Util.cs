@@ -3,6 +3,8 @@ using System.ComponentModel;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.Diagnostics;
+using System.IO;
+using System.Windows.Forms;
 
 namespace Cafe {
     class Util {
@@ -25,7 +27,11 @@ namespace Cafe {
                 [Description("rows")]
                 rows,
                 [Description("columns")]
-                columns
+                columns,
+                [Description("tables")]
+                tables,
+                [Description("messageBoxDuration")]
+                messageBoxDuration
             }
 
             public static string getValue(Key key) {
@@ -96,6 +102,88 @@ namespace Cafe {
                     }
                 }
                 return connection;
+            }
+        }
+
+        public class Animation {
+
+            public void fadeIn(Form form, int duration = 1500, int steps = 100, double currentOpacity = 0.0, double targetOpacity = 1.0, bool show = true, bool dialog = true) {
+                form.Opacity = currentOpacity;
+
+                Timer timer = new Timer();
+                timer.Interval = duration / steps;
+
+                int currentStep = 0;
+                timer.Tick += (arg1, arg2) => {
+                    form.Opacity += ((double)currentStep) / steps;
+                    currentStep++;
+
+                    if (form.Opacity >= targetOpacity || currentStep >= steps) {
+                        timer.Stop();
+                        timer.Dispose();
+                        if (show && dialog) {
+                            form.ShowDialog();
+                        } else if (show) {
+                            form.Show();
+                        }
+                    }
+                };
+                timer.Start();
+            }
+
+            public void fadeOut(Form form, int duration = 1500, int steps = 100, double currentOpacity = 1.0, double targetOpacity = 0.0, bool close = true) {
+                form.Opacity = currentOpacity;
+
+                Timer timer = new Timer();
+                timer.Interval = duration / steps;
+
+                int currentStep = 0;
+                timer.Tick += (arg1, arg2) => {
+                    form.Opacity -= ((double)currentStep) / steps;
+                    currentStep++;
+
+                    if (form.Opacity <= targetOpacity || currentStep >= steps) {
+                        timer.Stop();
+                        timer.Dispose();
+                        if (close) {
+                            form.Close();
+                        }
+                    }
+                };
+                timer.Start();
+            }
+
+
+
+
+        }
+
+        public static class Logger {
+            private static string logFile = "log.txt";
+            private static string startupPath = Application.StartupPath;
+
+            private static string filePath() => startupPath + "\\" + logFile;
+
+            public static void log(string log) {
+                string date = DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss");
+                log = date + ": " + log;
+                string enter = Environment.NewLine;
+                try {
+                    File.AppendAllText(filePath(), log + enter);
+                } catch (Exception ex) {
+                    Debug.WriteLine(ex.Message);
+                }
+            }
+
+            public static string read() {
+                try {
+                    using (StreamReader reader = new StreamReader(filePath())) {
+                        return reader.ReadToEnd();
+                    }
+                } catch (Exception ex) {
+                    log(ex.Message);
+                }
+                return "";
             }
         }
     }

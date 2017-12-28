@@ -136,7 +136,6 @@
             this.Name = "ConnectionParameters";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Connection Parameters";
-            this.Load += new System.EventHandler(this.ConnectionParameters_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

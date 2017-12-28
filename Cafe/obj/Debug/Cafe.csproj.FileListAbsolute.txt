@@ -24,3 +24,7 @@ D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\Cafe\obj\Debug\Cafe.frmAdisyon.resources
 D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\Cafe\obj\Debug\Cafe.MessageBoxForm.resources
 D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\Cafe\obj\Debug\Cafe.Properties.Resources.resources
 D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\Cafe\obj\Debug\Cafe.csproj.GenerateResource.Cache
+D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\Cafe\bin\Debug\Cafe.exe
+D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\Cafe\bin\Debug\Cafe.pdb
+D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\Cafe\bin\Debug\System.Configuration.dll
+D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\Cafe\obj\Debug\Cafe.csproj.CoreCompileInputs.cache
