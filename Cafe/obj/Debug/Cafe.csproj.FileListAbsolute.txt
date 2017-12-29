@@ -13,18 +13,20 @@ C:\Users\cengiz\source\repos\Cafe\Cafe\obj\Debug\Cafe.exe
 C:\Users\cengiz\source\repos\Cafe\Cafe\obj\Debug\Cafe.pdb
 C:\Users\cengiz\source\repos\Cafe\Cafe\obj\Debug\Cafe.csprojResolveAssemblyReference.cache
 C:\Users\cengiz\source\repos\Cafe\Cafe\obj\Debug\Cafe.ConnectionParameters.resources
+D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\Cafe\bin\Debug\button16.wav
+D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\Cafe\bin\Debug\tone_beep.wav
 D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\Cafe\bin\Debug\Cafe.exe.config
-D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\Cafe\obj\Debug\Cafe.exe
-D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\Cafe\obj\Debug\Cafe.pdb
-D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\Cafe\obj\Debug\Cafe.csprojResolveAssemblyReference.cache
+D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\Cafe\bin\Debug\Cafe.exe
+D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\Cafe\bin\Debug\Cafe.pdb
+D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\Cafe\bin\Debug\System.Configuration.dll
 D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\Cafe\obj\Debug\Cafe.ConnectionParameters.resources
 D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\Cafe\obj\Debug\Cafe.CustomButton.resources
+D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\Cafe\obj\Debug\Cafe.frmAppConfig.resources
 D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\Cafe\obj\Debug\Cafe.frmMasa.resources
 D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\Cafe\obj\Debug\Cafe.frmAdisyon.resources
 D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\Cafe\obj\Debug\Cafe.MessageBoxForm.resources
 D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\Cafe\obj\Debug\Cafe.Properties.Resources.resources
 D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\Cafe\obj\Debug\Cafe.csproj.GenerateResource.Cache
-D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\Cafe\bin\Debug\Cafe.exe
-D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\Cafe\bin\Debug\Cafe.pdb
-D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\Cafe\bin\Debug\System.Configuration.dll
 D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\Cafe\obj\Debug\Cafe.csproj.CoreCompileInputs.cache
+D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\Cafe\obj\Debug\Cafe.exe
+D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\Cafe\obj\Debug\Cafe.pdb

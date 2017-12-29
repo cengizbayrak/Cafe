@@ -2,6 +2,7 @@
 using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Drawing;
+using System.Media;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -106,6 +107,8 @@ namespace Cafe {
         }
 
         private void btnNumber_Click(object sender, EventArgs e) {
+            Util.Sound.playClick();
+
             Button btn = sender as Button;
             buttonValue val = (buttonValue)btn.Tag;
             if (val == buttonValue.sifir && txtAdisyon.TextLength == 0) {
@@ -125,6 +128,8 @@ namespace Cafe {
         }
 
         private void btnTamam_Click(object sender, EventArgs e) {
+            Util.Sound.playClick();
+
             if (txtAdisyon.TextLength == 0) {
                 btnTamam.Focus();
                 Close();
@@ -140,6 +145,15 @@ namespace Cafe {
                 frm.ShowDialog();
                 return;
             } else if (adisyon == 1455) {
+                txtAdisyon.Clear();
+                var frm = new frmAppConfig();
+                frm.ShowDialog();
+                return;
+            } else if (adisyon == 1456) {
+                Process.Start(Application.ExecutablePath);
+                Application.Exit();
+                return;
+            } else if (adisyon == 1469) {
                 txtAdisyon.Clear();
                 string log = Util.Logger.read();
                 var txt = new RichTextBox();
@@ -167,8 +181,11 @@ namespace Cafe {
 
             SqlConnection connection = Util.Connection.getConnection();
             if (connection == null) {
+                Util.Animation animation = new Util.Animation();
+                animation.fadeOut(this, 1500, 100, Opacity, 0.55, false);
                 string message = "Veri tabanı bağlantısı sağlanamadı!";
                 new MessageBoxForm(message).ShowDialog();
+                animation.fadeIn(this, 1500, 100, Opacity, 1.0, false);
                 return;
             }
             using (connection) {
@@ -188,6 +205,8 @@ namespace Cafe {
                         var timer = new System.Windows.Forms.Timer() {
                             Interval = 3000
                         };
+
+                        Util.Sound.playBeep();
                         try {
                             NotifyIcon notify = new NotifyIcon() {
                                 Icon = new Icon(Icon, 40, 40),
@@ -202,10 +221,14 @@ namespace Cafe {
                             Util.Logger.log(ex.Message);
                         }
                     }
+                    Util.Animation animation = new Util.Animation();
                     if (inserted) {
                         Close();
+                    } else {
+                        animation.fadeOut(this, 1500, 100, Opacity, 0.55, false);
                     }
                     new MessageBoxForm(message).ShowDialog();
+                    animation.fadeIn(this, 1500, 100, Opacity, 1.0, false);
                 } catch (Exception ex) {
                     string enter = Environment.NewLine;
                     new MessageBoxForm("Veri tabanı hatası sonucu işlem gerçekleştirilemedi!" + enter + enter + "Hata kodu: 101").ShowDialog();

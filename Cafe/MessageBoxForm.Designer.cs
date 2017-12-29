@@ -31,7 +31,7 @@
             // 
             // txtMesaj
             // 
-            this.txtMesaj.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.txtMesaj.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
             this.txtMesaj.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtMesaj.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtMesaj.Dock = System.Windows.Forms.DockStyle.Top;
@@ -60,6 +60,7 @@
             // 
             // lblNote
             // 
+            this.lblNote.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
             this.lblNote.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblNote.ForeColor = System.Drawing.Color.White;
             this.lblNote.Location = new System.Drawing.Point(44, 230);
@@ -72,6 +73,7 @@
             // lblNoteTag
             // 
             this.lblNoteTag.AutoSize = true;
+            this.lblNoteTag.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
             this.lblNoteTag.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblNoteTag.ForeColor = System.Drawing.Color.White;
             this.lblNoteTag.Location = new System.Drawing.Point(6, 230);
@@ -84,7 +86,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
             this.ClientSize = new System.Drawing.Size(567, 272);
             this.Controls.Add(this.lblNoteTag);
             this.Controls.Add(this.lblNote);

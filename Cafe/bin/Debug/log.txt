@@ -1,1 +1,16 @@
 29-12-2017 00:54:12: 'D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\Cafe\bin\Debug\log.txt' dosyası bulunamadı.
+29-12-2017 01:15:33: Kullanmış olduğunuz yazılımın lisans bilgisi bulunamadı!
+29-12-2017 01:19:58: Kullanmış olduğunuz yazılımın lisans bilgisi bulunamadı!
+29-12-2017 01:23:48: Kullanmış olduğunuz yazılımın lisans bilgisi bulunamadı!
+29-12-2017 01:27:56: Kullanmış olduğunuz yazılımın lisans bilgisi bulunamadı!
+29-12-2017 01:30:03: Boş akışın serisini kaldırma girişimi.
+29-12-2017 01:30:03: Kullanmış olduğunuz yazılımın lisans bilgisi bulunamadı!
+29-12-2017 01:30:23: Boş akışın serisini kaldırma girişimi.
+29-12-2017 01:30:26: Kullanmış olduğunuz yazılımın lisans bilgisi bulunamadı!
+29-12-2017 02:11:24: Akış okunabilir değildi.
+29-12-2017 02:11:24: Kullanmış olduğunuz yazılımın lisans bilgisi bulunamadı!
+29-12-2017 02:16:39: Boş akışın serisini kaldırma girişimi.
+29-12-2017 02:16:39: Kullanmış olduğunuz yazılımın lisans bilgisi bulunamadı!
+29-12-2017 02:30:33: Kullanmış olduğunuz yazılımın lisans bilgisi bulunamadı!
+29-12-2017 02:49:19: Sunucuyla bağlantı kurulurken ağ ile ilgili veya örneğe özel bir hata oluştu. Sunucu bulunamadı veya sunucuya erişilemiyor. Örnek adının doğru olduğunu ve SQL Server'ın uzak bağlantılara izin verdiğini doğrulayın. (provider: SQL Network Interfaces, error: 26 - Belirtilen Sunucuyu/Örneği Bulma Hatası)
+29-12-2017 02:49:50: Sunucuyla bağlantı kurulurken ağ ile ilgili veya örneğe özel bir hata oluştu. Sunucu bulunamadı veya sunucuya erişilemiyor. Örnek adının doğru olduğunu ve SQL Server'ın uzak bağlantılara izin verdiğini doğrulayın. (provider: SQL Network Interfaces, error: 26 - Belirtilen Sunucuyu/Örneği Bulma Hatası)

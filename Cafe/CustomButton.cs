@@ -22,11 +22,11 @@ namespace Cafe {
             btn.Refresh();
             var tooltip = new ToolTip();
 
-            btn.MouseHover += (s, e) => {
-                tooltip.SetToolTip(btn, Width.ToString() + "/" + Height.ToString() + "\n" +
-                    btn.Width.ToString() + "/" + btn.Height.ToString() + "\n" +
-                    btn.Font.ToString());
-            };
+            //btn.MouseHover += (s, e) => {
+            //    tooltip.SetToolTip(btn, Width.ToString() + "/" + Height.ToString() + "\n" +
+            //        btn.Width.ToString() + "/" + btn.Height.ToString() + "\n" +
+            //        btn.Font.ToString());
+            //};
            
             SizeChanged += (s, e) => {
                 btn.Size = Size;

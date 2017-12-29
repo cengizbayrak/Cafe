@@ -20,6 +20,29 @@ namespace Cafe {
 
             Util.Animation animation = new Util.Animation();
             Load += (s, e) => {
+                bool licenseValid = Util.License.licenseValid();
+                if (!licenseValid) {
+                    var app = Util.AppSettings.getValue(Util.AppSettings.Key.appName);
+                    string message = "Kullanmış olduğunuz yazılımın lisans bilgisi bulunamadı!";
+                    Util.Logger.log(message);
+                    MessageBox.Show(message, app, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    try {
+                        NotifyIcon icon = new NotifyIcon() {
+                            Icon = Icon,
+                            BalloonTipIcon = ToolTipIcon.Warning,
+                            BalloonTipTitle = app,
+                            Text = "Lisanssız yazılım kullanmak yasalara aykırıdır!",
+                            Visible = true,
+                            BalloonTipText = "Lisanssız yazılım kullanmak yasalara aykırıdır!"
+                        };
+                        icon.ShowBalloonTip(2000);
+                    } catch (Exception ex) {
+                        Util.Logger.log(ex.Message);
+                    }
+                    Close();
+                    Application.Exit();
+                    return;
+                }
                 setupLayout();
                 animation.fadeIn(this, 1500, 100, Opacity, 1.0, false, false);
             };
@@ -122,11 +145,13 @@ namespace Cafe {
                 }
                 var btn = new CustomButton((i + 1).ToString(),
                     (s, e) => {
+                        Util.Sound.playClick();
+
                         Button b = s as Button;
                         int masa = int.Parse(b.Text);
                         var frm = new frmAdisyon(masa);
                         Util.Animation animation = new Util.Animation();
-                        animation.fadeOut(this, 2500, 100, 1.0, 0.85, false);
+                        animation.fadeOut(this, 2500, 100, 1.0, 0.55, false);
                         frm.ShowDialog();
                         if (open) {
                             animation.fadeIn(this, 2500, 100, Opacity, 1.0, false, false);

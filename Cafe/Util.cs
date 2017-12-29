@@ -4,6 +4,9 @@ using System.Configuration;
 using System.Data.SqlClient;
 using System.Diagnostics;
 using System.IO;
+using System.Media;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Text;
 using System.Windows.Forms;
 
 namespace Cafe {
@@ -31,7 +34,9 @@ namespace Cafe {
                 [Description("tables")]
                 tables,
                 [Description("messageBoxDuration")]
-                messageBoxDuration
+                messageBoxDuration,
+                [Description("sound")]
+                sound
             }
 
             public static string getValue(Key key) {
@@ -184,6 +189,79 @@ namespace Cafe {
                     log(ex.Message);
                 }
                 return "";
+            }
+        }
+
+        public static class License {
+            private static string licenseFile = "license.dat";
+            //private static string licenseKey = "aHR0cHM6Ly9nb28uZ2wvM0RmN3E4";
+            private static string licenseKey = DateTime.Today.ToString("yyyyMM") + " " + "https://goo.gl/3Df7q8";
+
+            private static string path() => Application.StartupPath + "\\" + licenseFile;
+
+            public static bool licenseValid() {
+                string path = License.path();
+                if (!File.Exists(path)) {
+                    return false;
+                }
+                string content = "";
+                try {
+                    using (FileStream stream = new FileStream(path, FileMode.Open, FileAccess.Read)) {
+                        using (StreamReader reader = new StreamReader(new FileStream(path, FileMode.Open, FileAccess.Read))) {
+                            content = reader.ReadToEnd();
+                        }
+                    }
+                } catch (Exception ex) {
+                    Logger.log(ex.Message);
+                }
+                if (string.IsNullOrWhiteSpace(content)) {
+                    return false;
+                }
+                try {
+                    var binData = Convert.FromBase64String(content);
+                    using (MemoryStream stream = new MemoryStream(binData)) {
+                        BinaryFormatter formatter = new BinaryFormatter();
+                        byte[] bytes = (byte[])formatter.Deserialize(stream);
+                        string key = Encoding.Unicode.GetString(bytes);
+                        DateTime dateTime = DateTime.Parse(key);
+                        return DateTime.Now <= dateTime;
+                        //return !string.IsNullOrWhiteSpace(key) && key.Equals(licenseKey);
+                    }
+                } catch (Exception ex) {
+                    Logger.log(ex.Message);
+                }
+                return false;
+            }
+        }
+
+        public static class Sound {
+            private static bool play() {
+                bool play = false;
+                bool.TryParse(Util.AppSettings.getValue(Util.AppSettings.Key.sound), out play);
+                return play;
+            }
+            public static void playClick() {
+                if (!play()) return;
+
+                string click = "button16.wav";
+                try {
+                    SoundPlayer player = new SoundPlayer(Application.StartupPath + "\\" + click);
+                    player.Play();
+                } catch (Exception ex) {
+                    Logger.log(ex.Message);
+                }
+            }
+
+            public static void playBeep() {
+                if (!play()) return;
+
+                string beep = "tone_beep.wav";
+                try {
+                    SoundPlayer player = new SoundPlayer(Application.StartupPath + "\\" + beep);
+                    player.Play();
+                } catch (Exception ex) {
+                    Logger.log(ex.Message);
+                }
             }
         }
     }
