@@ -3,6 +3,7 @@ using System.ComponentModel;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.Diagnostics;
+using System.Drawing;
 using System.IO;
 using System.Media;
 using System.Runtime.Serialization.Formatters.Binary;
@@ -12,6 +13,30 @@ using System.Windows.Forms;
 namespace Cafe {
     class Util {
         private const string tagUtil = "Util";
+
+        public static class Notify {
+            public static void notify(Form form, string text) {
+                bool on = false;
+                string value = AppSettings.getValue(key: AppSettings.Key.notifyIcon);
+                bool.TryParse(value, out on);
+                if (!on) {
+                    return;
+                }
+                try {
+                    NotifyIcon notify = new NotifyIcon() {
+                        Icon = new Icon(form.Icon, 40, 40),
+                        Visible = true,
+                        Text = text,
+                        BalloonTipTitle = "Cafe Arjantin",
+                        BalloonTipText = text,
+                        BalloonTipIcon = ToolTipIcon.Info
+                    };
+                    notify.ShowBalloonTip(2000);
+                } catch (Exception ex) {
+                    Logger.log(ex.Message);
+                }
+            }
+        }
 
         public static class AppSettings {
             public enum Key {
@@ -36,7 +61,9 @@ namespace Cafe {
                 [Description("messageBoxDuration")]
                 messageBoxDuration,
                 [Description("sound")]
-                sound
+                sound,
+                [Description("notifyIcon")]
+                notifyIcon
             }
 
             public static string getValue(Key key) {

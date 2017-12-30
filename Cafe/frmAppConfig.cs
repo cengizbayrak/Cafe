@@ -74,6 +74,7 @@ namespace Cafe {
                     Application.Exit();
                     return;
                 }
+                Close();
             };
         }
     }
