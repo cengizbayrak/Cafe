@@ -50,7 +50,10 @@ namespace Cafe {
                 bool bildirimler = false;
                 bool.TryParse(notify, out bildirimler);
                 switchBildirimler.Checked = bildirimler;
+
             };
+
+            Shown += (s, e) => btnKaydet.Focus();
 
             nudSatir.ValueChanged += (s, e) => {
                 nudMasa.Maximum = (int)nudSatir.Value * (int)nudSutun.Value;
