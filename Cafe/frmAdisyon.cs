@@ -9,6 +9,9 @@ using System.Windows.Forms;
 
 namespace Cafe {
     public partial class frmAdisyon : Form {
+        private const string adisyonBaslik = "Adisyon numaranızı girin";
+        private const string masaBaslik = "Masa Bulma";
+
         /// <summary>
         /// string.format ile çağır, adisyon numarasını parametre olarak gönder
         /// </summary>
@@ -16,7 +19,7 @@ namespace Cafe {
         /// <summary>
         /// string.format ile çağır, masa ve adisyon numarasını parametre olarak gönder
         /// </summary>
-        private const string bulunanMasa = "{0} masa - {1} adisyon";
+        private string bulunanMasa = "Masa {0}" + Environment.NewLine + "Adisyon {1}";
 
         private enum enOperation {
             addition,
@@ -74,6 +77,7 @@ namespace Cafe {
             Opacity = 0.0;
 
             Load += (s, e) => {
+                lblAdisyon.Text = adisyonBaslik;
                 StartPosition = FormStartPosition.CenterParent;
                 fadeIn();
             };
@@ -192,6 +196,7 @@ namespace Cafe {
             } else if (adisyon == 9999) {
                 if (operation == enOperation.addition) {
                     operation = enOperation.table;
+                    lblAdisyon.Text = masaBaslik;
                     txtAdisyon.Clear();
                     return;
                 }
@@ -208,15 +213,12 @@ namespace Cafe {
                             SqlCommand command = new SqlCommand(sql, conn);
                             SqlDataReader reader = command.ExecuteReader();
                             if (!reader.HasRows) {
-                                string msg = "Masa bilgisi bulunamadı! Doğru adisyon numarası girdiğinize emin olun!";
-                                fadeOut(0.55);
-                                new MessageBoxForm(msg).ShowDialog();
+                                dialog("Masa bilgisi bulunamadı! Doğru adisyon numarası girdiğinize emin olun!");
+                                fadeIn();
                             } else if (reader.Read()) {
                                 int table = (int)reader.GetSqlInt32(0);
                                 string msg = string.Format(bulunanMasa, table, adisyon);
-                                fadeOut(0.55);
-                                new MessageBoxForm(msg).ShowDialog();
-                                fadeIn();
+                                dialog(msg);
                             }
                         } catch (TableException ex) {
                             Util.Logger.log(ex.Message);
@@ -226,15 +228,13 @@ namespace Cafe {
                     }
                 }
                 operation = enOperation.addition;
+                lblAdisyon.Text = adisyonBaslik;
                 return;
             }
 
             SqlConnection connection = Util.Connection.getConnection();
             if (connection == null) {
-                fadeOut(0.55);
-                string message = "Veri tabanı bağlantısı sağlanamadı!";
-                new MessageBoxForm(message).ShowDialog();
-                fadeIn();
+                dialog("Veri tabanı bağlantısı sağlanamadı!");
                 return;
             }
             using (connection) {
@@ -267,15 +267,19 @@ namespace Cafe {
                     new MessageBoxForm(message).ShowDialog();
                     fadeIn();
                 } catch (AdditionException ex) {
-                    string enter = Environment.NewLine;
                     new MessageBoxForm("Veri tabanı hatası sonucu işlem gerçekleştirilemedi!").ShowDialog();
                     Util.Logger.log(ex.Message);
                 } catch (Exception ex) {
-                    string enter = Environment.NewLine;
                     new MessageBoxForm("Veri tabanı hatası sonucu işlem gerçekleştirilemedi!").ShowDialog();
                     Util.Logger.log(ex.Message);
                 }
             }
+        }
+
+        private void dialog(string message) {
+            fadeOut(0.55);
+            new MessageBoxForm(message).ShowDialog();
+            fadeIn();
         }
 
         private void fadeIn() {

@@ -28,12 +28,14 @@
             this.lblSutun = new System.Windows.Forms.Label();
             this.lblMesajSuresi = new System.Windows.Forms.Label();
             this.nudMesajSuresi = new System.Windows.Forms.NumericUpDown();
-            this.switchSesler = new SwitchBox();
             this.lblSesler = new System.Windows.Forms.Label();
             this.btnKaydet = new System.Windows.Forms.Button();
             this.nudSatir = new System.Windows.Forms.NumericUpDown();
             this.nudSutun = new System.Windows.Forms.NumericUpDown();
             this.nudMasa = new System.Windows.Forms.NumericUpDown();
+            this.switchSesler = new SwitchBox();
+            this.lblBildirimler = new System.Windows.Forms.Label();
+            this.switchBildirimler = new SwitchBox();
             ((System.ComponentModel.ISupportInitialize)(this.nudMesajSuresi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSatir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSutun)).BeginInit();
@@ -83,17 +85,6 @@
             this.nudMesajSuresi.Size = new System.Drawing.Size(92, 20);
             this.nudMesajSuresi.TabIndex = 7;
             // 
-            // switchSesler
-            // 
-            this.switchSesler.AutoSize = true;
-            this.switchSesler.Location = new System.Drawing.Point(98, 117);
-            this.switchSesler.Name = "switchSesler";
-            this.switchSesler.Padding = new System.Windows.Forms.Padding(6);
-            this.switchSesler.Size = new System.Drawing.Size(92, 29);
-            this.switchSesler.TabIndex = 8;
-            this.switchSesler.Text = "switchBox1";
-            this.switchSesler.UseVisualStyleBackColor = true;
-            // 
             // lblSesler
             // 
             this.lblSesler.AutoSize = true;
@@ -105,7 +96,7 @@
             // 
             // btnKaydet
             // 
-            this.btnKaydet.Location = new System.Drawing.Point(115, 152);
+            this.btnKaydet.Location = new System.Drawing.Point(115, 187);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(75, 23);
             this.btnKaydet.TabIndex = 10;
@@ -133,11 +124,44 @@
             this.nudMasa.Size = new System.Drawing.Size(92, 20);
             this.nudMasa.TabIndex = 13;
             // 
+            // switchSesler
+            // 
+            this.switchSesler.AutoSize = true;
+            this.switchSesler.Location = new System.Drawing.Point(98, 117);
+            this.switchSesler.Name = "switchSesler";
+            this.switchSesler.Padding = new System.Windows.Forms.Padding(6);
+            this.switchSesler.Size = new System.Drawing.Size(92, 29);
+            this.switchSesler.TabIndex = 8;
+            this.switchSesler.Text = "switchBox1";
+            this.switchSesler.UseVisualStyleBackColor = true;
+            // 
+            // lblBildirimler
+            // 
+            this.lblBildirimler.AutoSize = true;
+            this.lblBildirimler.Location = new System.Drawing.Point(12, 158);
+            this.lblBildirimler.Name = "lblBildirimler";
+            this.lblBildirimler.Size = new System.Drawing.Size(53, 13);
+            this.lblBildirimler.TabIndex = 15;
+            this.lblBildirimler.Text = "Bildirimler:";
+            // 
+            // switchBildirimler
+            // 
+            this.switchBildirimler.AutoSize = true;
+            this.switchBildirimler.Location = new System.Drawing.Point(98, 152);
+            this.switchBildirimler.Name = "switchBildirimler";
+            this.switchBildirimler.Padding = new System.Windows.Forms.Padding(6);
+            this.switchBildirimler.Size = new System.Drawing.Size(92, 29);
+            this.switchBildirimler.TabIndex = 14;
+            this.switchBildirimler.Text = "switchBox1";
+            this.switchBildirimler.UseVisualStyleBackColor = true;
+            // 
             // frmAppConfig
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(204, 185);
+            this.ClientSize = new System.Drawing.Size(204, 221);
+            this.Controls.Add(this.lblBildirimler);
+            this.Controls.Add(this.switchBildirimler);
             this.Controls.Add(this.nudMasa);
             this.Controls.Add(this.nudSutun);
             this.Controls.Add(this.nudSatir);
@@ -150,7 +174,6 @@
             this.Controls.Add(this.lblMasa);
             this.Controls.Add(this.lblSatir);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.MaximumSize = new System.Drawing.Size(220, 224);
             this.MinimumSize = new System.Drawing.Size(220, 224);
             this.Name = "frmAppConfig";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -177,5 +200,7 @@
         private System.Windows.Forms.NumericUpDown nudSatir;
         private System.Windows.Forms.NumericUpDown nudSutun;
         private System.Windows.Forms.NumericUpDown nudMasa;
+        private System.Windows.Forms.Label lblBildirimler;
+        private SwitchBox switchBildirimler;
     }
 }

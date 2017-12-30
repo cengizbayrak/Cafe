@@ -22,6 +22,7 @@ namespace Cafe {
                 string tables = Util.AppSettings.getValue(Util.AppSettings.Key.tables);
                 string duration = Util.AppSettings.getValue(Util.AppSettings.Key.messageBoxDuration);
                 string sound = Util.AppSettings.getValue(Util.AppSettings.Key.sound);
+                string notify = Util.AppSettings.getValue(Util.AppSettings.Key.notifyIcon);
 
                 int deger = 0;
                 int.TryParse(rows, out deger);
@@ -45,6 +46,10 @@ namespace Cafe {
                 bool ses = false;
                 bool.TryParse(sound, out ses);
                 switchSesler.Checked = ses;
+
+                bool bildirimler = false;
+                bool.TryParse(notify, out bildirimler);
+                switchBildirimler.Checked = bildirimler;
             };
 
             nudSatir.ValueChanged += (s, e) => {
@@ -60,12 +65,14 @@ namespace Cafe {
                 string tables = Convert.ToString(nudMasa.Value);
                 string duration = Convert.ToString(nudMesajSuresi.Value);
                 string sound = Convert.ToString(switchSesler.Checked).ToLower();
+                string notify = Convert.ToString(switchBildirimler.Checked).ToLower();
 
                 Util.AppSettings.setValue(Util.AppSettings.Key.rows, rows);
                 Util.AppSettings.setValue(Util.AppSettings.Key.columns, columns);
                 Util.AppSettings.setValue(Util.AppSettings.Key.tables, tables);
                 Util.AppSettings.setValue(Util.AppSettings.Key.messageBoxDuration, duration);
                 Util.AppSettings.setValue(Util.AppSettings.Key.sound, sound);
+                Util.AppSettings.setValue(Util.AppSettings.Key.notifyIcon, notify);
 
                 int newTables = 0;
                 int.TryParse(Util.AppSettings.getValue(Util.AppSettings.Key.tables), out newTables);
