@@ -1,0 +1,6 @@
+D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\BinaryFormatterLib\bin\Debug\BinaryFormatterLib.dll
+D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\BinaryFormatterLib\bin\Debug\BinaryFormatterLib.pdb
+D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\BinaryFormatterLib\obj\Debug\BinFormat.csprojResolveAssemblyReference.cache
+D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\BinaryFormatterLib\obj\Debug\BinFormat.csproj.CoreCompileInputs.cache
+D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\BinaryFormatterLib\obj\Debug\BinaryFormatterLib.dll
+D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\BinaryFormatterLib\obj\Debug\BinaryFormatterLib.pdb

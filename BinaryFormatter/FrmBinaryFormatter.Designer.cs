@@ -1,5 +1,5 @@
-﻿namespace BinaryFormatterTutorial {
-    partial class frmBinaryFormatter {
+﻿namespace BinaryFormatter {
+    partial class FrmBinaryFormatter {
         /// <summary>
         ///Gerekli tasarımcı değişkeni.
         /// </summary>

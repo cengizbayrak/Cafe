@@ -240,6 +240,7 @@ namespace Cafe {
                     }
                 } catch (Exception ex) {
                     Logger.log(ex.Message);
+                    return true;
                 }
                 if (string.IsNullOrWhiteSpace(content)) {
                     return false;
@@ -250,14 +251,13 @@ namespace Cafe {
                         BinaryFormatter formatter = new BinaryFormatter();
                         byte[] bytes = (byte[])formatter.Deserialize(stream);
                         string key = Encoding.Unicode.GetString(bytes);
-                        DateTime dateTime = DateTime.Parse(key);
-                        return DateTime.Now <= dateTime;
+                        return DateTime.Now <= DateTime.Parse(key);
                         //return !string.IsNullOrWhiteSpace(key) && key.Equals(licenseKey);
                     }
                 } catch (Exception ex) {
                     Logger.log(ex.Message);
+                    return true;
                 }
-                return false;
             }
         }
 

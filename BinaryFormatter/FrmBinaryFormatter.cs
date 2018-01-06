@@ -1,12 +1,11 @@
 ﻿using System;
 using System.IO;
-using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Windows.Forms;
 
-namespace BinaryFormatterTutorial {
-    public partial class frmBinaryFormatter : Form {
-        public frmBinaryFormatter() {
+namespace BinaryFormatter {
+    public partial class FrmBinaryFormatter : Form {
+        public FrmBinaryFormatter() {
             InitializeComponent();
 
             rtxtPlain.Clear();
@@ -17,7 +16,7 @@ namespace BinaryFormatterTutorial {
                     return;
                 }
                 byte[] binData = Convert.FromBase64String(rtxtBinary.Text);
-                BinaryFormatter formatter = new BinaryFormatter();
+                System.Runtime.Serialization.Formatters.Binary.BinaryFormatter formatter = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
                 MemoryStream ms = new MemoryStream(binData);
                 var bytes = (byte[])formatter.Deserialize(ms);
                 rtxtPlain.Text = Encoding.Unicode.GetString(bytes);
@@ -27,7 +26,7 @@ namespace BinaryFormatterTutorial {
                     return;
                 }
                 MemoryStream streamMemory = new MemoryStream();
-                BinaryFormatter formatter = new BinaryFormatter();
+               System.Runtime.Serialization.Formatters.Binary. BinaryFormatter formatter = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
                 var bytes = Encoding.Unicode.GetBytes(rtxtPlain.Text);
                 formatter.Serialize(streamMemory, bytes);
                 rtxtBinary.Text = Convert.ToBase64String(streamMemory.GetBuffer());

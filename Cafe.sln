@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cafe", "Cafe\Cafe.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryFormatter", "BinaryFormatter\BinaryFormatter.csproj", "{284527D3-F759-4A59-B137-1FFCB25DA49D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinFormat", "BinaryFormatterLib\BinFormat.csproj", "{FCEC5671-DC7C-4F5C-96FF-393A6A78BC20}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{284527D3-F759-4A59-B137-1FFCB25DA49D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{284527D3-F759-4A59-B137-1FFCB25DA49D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{284527D3-F759-4A59-B137-1FFCB25DA49D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCEC5671-DC7C-4F5C-96FF-393A6A78BC20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCEC5671-DC7C-4F5C-96FF-393A6A78BC20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCEC5671-DC7C-4F5C-96FF-393A6A78BC20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCEC5671-DC7C-4F5C-96FF-393A6A78BC20}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

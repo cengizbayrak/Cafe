@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BinaryFormatterTutorial {
+namespace BinaryFormatter {
     static class Program {
         /// <summary>
         /// Uygulamanın ana girdi noktası.
@@ -13,7 +13,7 @@ namespace BinaryFormatterTutorial {
         static void Main() {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmBinaryFormatter());
+            Application.Run(new FrmBinaryFormatter());
         }
     }
 }

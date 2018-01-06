@@ -14,3 +14,4 @@
 29-12-2017 02:30:33: Kullanmış olduğunuz yazılımın lisans bilgisi bulunamadı!
 29-12-2017 02:49:19: Sunucuyla bağlantı kurulurken ağ ile ilgili veya örneğe özel bir hata oluştu. Sunucu bulunamadı veya sunucuya erişilemiyor. Örnek adının doğru olduğunu ve SQL Server'ın uzak bağlantılara izin verdiğini doğrulayın. (provider: SQL Network Interfaces, error: 26 - Belirtilen Sunucuyu/Örneği Bulma Hatası)
 29-12-2017 02:49:50: Sunucuyla bağlantı kurulurken ağ ile ilgili veya örneğe özel bir hata oluştu. Sunucu bulunamadı veya sunucuya erişilemiyor. Örnek adının doğru olduğunu ve SQL Server'ın uzak bağlantılara izin verdiğini doğrulayın. (provider: SQL Network Interfaces, error: 26 - Belirtilen Sunucuyu/Örneği Bulma Hatası)
+06-01-2018 14:26:13: Login failed for user 'sa'. The user is not associated with a trusted SQL Server connection.
