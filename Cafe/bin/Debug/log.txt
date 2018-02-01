@@ -15,3 +15,25 @@
 29-12-2017 02:49:19: Sunucuyla bağlantı kurulurken ağ ile ilgili veya örneğe özel bir hata oluştu. Sunucu bulunamadı veya sunucuya erişilemiyor. Örnek adının doğru olduğunu ve SQL Server'ın uzak bağlantılara izin verdiğini doğrulayın. (provider: SQL Network Interfaces, error: 26 - Belirtilen Sunucuyu/Örneği Bulma Hatası)
 29-12-2017 02:49:50: Sunucuyla bağlantı kurulurken ağ ile ilgili veya örneğe özel bir hata oluştu. Sunucu bulunamadı veya sunucuya erişilemiyor. Örnek adının doğru olduğunu ve SQL Server'ın uzak bağlantılara izin verdiğini doğrulayın. (provider: SQL Network Interfaces, error: 26 - Belirtilen Sunucuyu/Örneği Bulma Hatası)
 06-01-2018 14:26:13: Login failed for user 'sa'. The user is not associated with a trusted SQL Server connection.
+01-02-2018 22:00:19: Login failed for user 'sa'. The user is not associated with a trusted SQL Server connection.
+01-02-2018 22:01:14: SMTP sunucusu güvenli bir bağlantı gerektiriyor veya istemcinin kimliği doğrulanmadı. Sunucu yanıtı şöyleydi: 5.5.1 Authentication Required. Learn more at
+01-02-2018 22:01:17: SMTP sunucusu güvenli bir bağlantı gerektiriyor veya istemcinin kimliği doğrulanmadı. Sunucu yanıtı şöyleydi: 5.5.1 Authentication Required. Learn more at
+01-02-2018 22:01:20: SMTP sunucusu güvenli bir bağlantı gerektiriyor veya istemcinin kimliği doğrulanmadı. Sunucu yanıtı şöyleydi: 5.5.1 Authentication Required. Learn more at
+01-02-2018 22:01:23: SMTP sunucusu güvenli bir bağlantı gerektiriyor veya istemcinin kimliği doğrulanmadı. Sunucu yanıtı şöyleydi: 5.5.1 Authentication Required. Learn more at
+01-02-2018 22:01:26: SMTP sunucusu güvenli bir bağlantı gerektiriyor veya istemcinin kimliği doğrulanmadı. Sunucu yanıtı şöyleydi: 5.5.1 Authentication Required. Learn more at
+01-02-2018 22:01:29: SMTP sunucusu güvenli bir bağlantı gerektiriyor veya istemcinin kimliği doğrulanmadı. Sunucu yanıtı şöyleydi: 5.5.1 Authentication Required. Learn more at
+01-02-2018 22:01:32: SMTP sunucusu güvenli bir bağlantı gerektiriyor veya istemcinin kimliği doğrulanmadı. Sunucu yanıtı şöyleydi: 5.5.1 Authentication Required. Learn more at
+01-02-2018 22:01:35: SMTP sunucusu güvenli bir bağlantı gerektiriyor veya istemcinin kimliği doğrulanmadı. Sunucu yanıtı şöyleydi: 5.5.1 Authentication Required. Learn more at
+01-02-2018 22:01:38: SMTP sunucusu güvenli bir bağlantı gerektiriyor veya istemcinin kimliği doğrulanmadı. Sunucu yanıtı şöyleydi: 5.5.1 Authentication Required. Learn more at
+01-02-2018 22:01:41: SMTP sunucusu güvenli bir bağlantı gerektiriyor veya istemcinin kimliği doğrulanmadı. Sunucu yanıtı şöyleydi: 5.5.1 Authentication Required. Learn more at
+01-02-2018 22:01:44: SMTP sunucusu güvenli bir bağlantı gerektiriyor veya istemcinin kimliği doğrulanmadı. Sunucu yanıtı şöyleydi: 5.5.1 Authentication Required. Learn more at
+01-02-2018 22:01:47: SMTP sunucusu güvenli bir bağlantı gerektiriyor veya istemcinin kimliği doğrulanmadı. Sunucu yanıtı şöyleydi: 5.5.1 Authentication Required. Learn more at
+01-02-2018 22:01:50: SMTP sunucusu güvenli bir bağlantı gerektiriyor veya istemcinin kimliği doğrulanmadı. Sunucu yanıtı şöyleydi: 5.5.1 Authentication Required. Learn more at
+01-02-2018 22:16:08: SMTP sunucusu güvenli bir bağlantı gerektiriyor veya istemcinin kimliği doğrulanmadı. Sunucu yanıtı şöyleydi: 5.5.1 Authentication Required. Learn more at
+01-02-2018 22:16:10: SMTP sunucusu güvenli bir bağlantı gerektiriyor veya istemcinin kimliği doğrulanmadı. Sunucu yanıtı şöyleydi: 5.5.1 Authentication Required. Learn more at
+01-02-2018 22:16:13: SMTP sunucusu güvenli bir bağlantı gerektiriyor veya istemcinin kimliği doğrulanmadı. Sunucu yanıtı şöyleydi: 5.5.1 Authentication Required. Learn more at
+01-02-2018 22:16:16: SMTP sunucusu güvenli bir bağlantı gerektiriyor veya istemcinin kimliği doğrulanmadı. Sunucu yanıtı şöyleydi: 5.5.1 Authentication Required. Learn more at
+01-02-2018 22:16:22: SMTP sunucusu güvenli bir bağlantı gerektiriyor veya istemcinin kimliği doğrulanmadı. Sunucu yanıtı şöyleydi: 5.5.1 Authentication Required. Learn more at
+01-02-2018 22:16:22: SMTP sunucusu güvenli bir bağlantı gerektiriyor veya istemcinin kimliği doğrulanmadı. Sunucu yanıtı şöyleydi: 5.5.1 Authentication Required. Learn more at
+01-02-2018 22:16:25: SMTP sunucusu güvenli bir bağlantı gerektiriyor veya istemcinin kimliği doğrulanmadı. Sunucu yanıtı şöyleydi: 5.5.1 Authentication Required. Learn more at
+01-02-2018 22:16:28: SMTP sunucusu güvenli bir bağlantı gerektiriyor veya istemcinin kimliği doğrulanmadı. Sunucu yanıtı şöyleydi: 5.5.1 Authentication Required. Learn more at

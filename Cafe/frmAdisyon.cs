@@ -1,10 +1,6 @@
 ﻿using System;
 using System.Data.SqlClient;
 using System.Diagnostics;
-using System.Drawing;
-using System.Media;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Cafe {
