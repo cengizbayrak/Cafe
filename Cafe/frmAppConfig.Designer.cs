@@ -34,6 +34,8 @@
             this.nudSutun = new System.Windows.Forms.NumericUpDown();
             this.nudMasa = new System.Windows.Forms.NumericUpDown();
             this.lblBildirimler = new System.Windows.Forms.Label();
+            this.switchSesler = new SwitchBox();
+            this.switchBildirimler = new SwitchBox();
             ((System.ComponentModel.ISupportInitialize)(this.nudMesajSuresi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSatir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSutun)).BeginInit();
@@ -131,11 +133,35 @@
             this.lblBildirimler.TabIndex = 15;
             this.lblBildirimler.Text = "Bildirimler:";
             // 
+            // switchSesler
+            // 
+            this.switchSesler.AutoSize = true;
+            this.switchSesler.Location = new System.Drawing.Point(98, 116);
+            this.switchSesler.Name = "switchSesler";
+            this.switchSesler.Padding = new System.Windows.Forms.Padding(6);
+            this.switchSesler.Size = new System.Drawing.Size(92, 29);
+            this.switchSesler.TabIndex = 16;
+            this.switchSesler.Text = "switchBox1";
+            this.switchSesler.UseVisualStyleBackColor = true;
+            // 
+            // switchBildirimler
+            // 
+            this.switchBildirimler.AutoSize = true;
+            this.switchBildirimler.Location = new System.Drawing.Point(98, 151);
+            this.switchBildirimler.Name = "switchBildirimler";
+            this.switchBildirimler.Padding = new System.Windows.Forms.Padding(6);
+            this.switchBildirimler.Size = new System.Drawing.Size(92, 29);
+            this.switchBildirimler.TabIndex = 17;
+            this.switchBildirimler.Text = "switchBox2";
+            this.switchBildirimler.UseVisualStyleBackColor = true;
+            // 
             // frmAppConfig
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(204, 221);
+            this.Controls.Add(this.switchBildirimler);
+            this.Controls.Add(this.switchSesler);
             this.Controls.Add(this.lblBildirimler);
             this.Controls.Add(this.nudMasa);
             this.Controls.Add(this.nudSutun);
@@ -174,5 +200,7 @@
         private System.Windows.Forms.NumericUpDown nudSutun;
         private System.Windows.Forms.NumericUpDown nudMasa;
         private System.Windows.Forms.Label lblBildirimler;
+        private SwitchBox switchSesler;
+        private SwitchBox switchBildirimler;
     }
 }

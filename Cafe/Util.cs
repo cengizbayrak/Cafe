@@ -73,6 +73,7 @@ namespace Cafe {
                 try {
                     return ConfigurationManager.AppSettings[description];
                 } catch (Exception ex) {
+                    Logger.log(ex.Message);
                     return "";
                 }
             }
@@ -251,6 +252,7 @@ namespace Cafe {
                         BinaryFormatter formatter = new BinaryFormatter();
                         byte[] bytes = (byte[])formatter.Deserialize(stream);
                         string key = Encoding.Unicode.GetString(bytes);
+                        // 2018-05-01 dat
                         return DateTime.Now <= DateTime.Parse(key);
                         //return !string.IsNullOrWhiteSpace(key) && key.Equals(licenseKey);
                     }
@@ -262,33 +264,46 @@ namespace Cafe {
         }
 
         public static class Sound {
-            private static bool play() {
+            private static bool playOn() {
                 bool play = false;
-                bool.TryParse(Util.AppSettings.getValue(Util.AppSettings.Key.sound), out play);
+                bool.TryParse(AppSettings.getValue(AppSettings.Key.sound), out play);
                 return play;
             }
-            public static void playClick() {
-                if (!play()) return;
 
-                string click = "button16.wav";
+            public static void play(Type type) {
+                if (!playOn())
+                    return;
+                string soundLocation = soundFile(type);
+                if (string.IsNullOrWhiteSpace(soundLocation)) {
+                    return;
+                }
                 try {
-                    SoundPlayer player = new SoundPlayer(Application.StartupPath + "\\" + click);
+                    SoundPlayer player = new SoundPlayer(soundLocation);
                     player.Play();
                 } catch (Exception ex) {
                     Logger.log(ex.Message);
                 }
             }
 
-            public static void playBeep() {
-                if (!play()) return;
-
-                string beep = "tone_beep.wav";
-                try {
-                    SoundPlayer player = new SoundPlayer(Application.StartupPath + "\\" + beep);
-                    player.Play();
-                } catch (Exception ex) {
-                    Logger.log(ex.Message);
+            private static string soundFile(Type type) {
+                string path = Application.StartupPath;
+                string file;
+                switch (type) {
+                    case Type.click:
+                        file = "button16.wav";
+                        break;
+                    case Type.beep:
+                        file = "tone_beep.wav";
+                        break;
+                    default:
+                        return "";
                 }
+                return path + "\\" + file;
+            }
+
+            public enum Type {
+                click,
+                beep
             }
         }
     }

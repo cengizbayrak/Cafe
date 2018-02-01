@@ -11,11 +11,11 @@ namespace Cafe {
     public partial class frmAdisyon : Form {
         private const string adisyonBaslik = "Adisyon numaranızı girin";
         private const string masaBaslik = "Masa Bulma";
-
+        private static string enter = Environment.NewLine;
         /// <summary>
         /// string.format ile çağır, adisyon numarasını parametre olarak gönder
         /// </summary>
-        private const string adisyonIslenmis = "{0} numaralı adisyon işleme alınmış görünüyor! Lütfen adisyon numaranızı kontrol edin!";
+        private string adisyonIslenmis = "{0} numaralı adisyon işleme alınmış görünüyor!" + enter + "Lütfen adisyon numaranızı kontrol edin!";
         /// <summary>
         /// string.format ile çağır, masa ve adisyon numarasını parametre olarak gönder
         /// </summary>
@@ -98,7 +98,8 @@ namespace Cafe {
             };
             txtAdisyon.GotFocus += (tas, tae) => btnTamam.Focus();
             btnVazgec.Click += (bvs, bve) => {
-                Util.Sound.playClick(); Close();
+                Util.Sound.play(Util.Sound.Type.click);
+                Close();
             };
             btnTamam.Click += btnTamam_Click;
 
@@ -123,7 +124,7 @@ namespace Cafe {
         }
 
         private void btnNumber_Click(object sender, EventArgs e) {
-            Util.Sound.playClick();
+            Util.Sound.play(Util.Sound.Type.click);
 
             Button btn = sender as Button;
             buttonValue val = (buttonValue)btn.Tag;
@@ -144,7 +145,7 @@ namespace Cafe {
         }
 
         private void btnTamam_Click(object sender, EventArgs e) {
-            Util.Sound.playClick();
+            Util.Sound.play(Util.Sound.Type.click);
 
             if (txtAdisyon.TextLength == 0) {
                 btnTamam.Focus();
@@ -251,12 +252,11 @@ namespace Cafe {
                     connection.Close();
                     String message = string.Format(adisyonIslenmis, adisyon);
                     if (inserted) {
-                        string enter = Environment.NewLine;
-                        message = string.Format("{0} nolu adisyon, {1} nolu masa bilginiz iletildi. Siparişiniz masanıza getirilecektir." + enter + "Afiyet olsun.", adisyon, masa);
+                        message = string.Format("{0} nolu adisyon, {1} nolu masa bilginiz iletildi." + enter + "Siparişiniz masanıza getirilecektir." + enter + "Afiyet olsun.", adisyon, masa);
                         var timer = new System.Windows.Forms.Timer() {
                             Interval = 3000
                         };
-                        Util.Sound.playBeep();
+                        Util.Sound.play(Util.Sound.Type.beep);
                         Util.Notify.notify(this, "Adisyon ve masa bilginiz iletildi. Afiyet olsun.");
                     }
                     if (inserted) {

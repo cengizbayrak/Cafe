@@ -98,6 +98,7 @@ namespace Cafe {
                             }
                         }
                     } catch (Exception ex) {
+                        Util.Logger.log(ex.Message);
                     }
                 } catch (Exception) {
                 }
@@ -145,7 +146,7 @@ namespace Cafe {
                 }
                 var btn = new CustomButton((i + 1).ToString(),
                     (s, e) => {
-                        Util.Sound.playClick();
+                        Util.Sound.play(Util.Sound.Type.click);
 
                         Button b = s as Button;
                         int masa = int.Parse(b.Text);
