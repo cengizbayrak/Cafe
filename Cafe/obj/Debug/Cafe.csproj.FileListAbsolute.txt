@@ -30,4 +30,3 @@ D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\Cafe\obj\Debug\Cafe.csproj.GenerateResour
 D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\Cafe\obj\Debug\Cafe.csproj.CoreCompileInputs.cache
 D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\Cafe\obj\Debug\Cafe.exe
 D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\Cafe\obj\Debug\Cafe.pdb
-D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\Cafe\obj\Debug\Cafe.csprojResolveAssemblyReference.cache

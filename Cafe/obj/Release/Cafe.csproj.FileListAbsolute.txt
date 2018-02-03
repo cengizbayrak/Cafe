@@ -29,4 +29,3 @@ D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\Cafe\obj\Release\Cafe.pdb
 D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\Cafe\bin\Release\button16.wav
 D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\Cafe\bin\Release\tone_beep.wav
 D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\Cafe\obj\Release\Cafe.frmAppConfig.resources
-D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\Cafe\obj\Release\Cafe.csprojResolveAssemblyReference.cache

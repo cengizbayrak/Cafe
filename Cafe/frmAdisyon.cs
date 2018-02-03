@@ -166,6 +166,9 @@ namespace Cafe {
                 Process.Start(Application.ExecutablePath);
                 Application.Exit();
                 return;
+            } else if (adisyon == 1457) {
+                Process.Start(Application.StartupPath + "\\Manual.pdf");
+                return;
             } else if (adisyon == 1469) {
                 txtAdisyon.Clear();
                 string log = Util.Logger.read();
