@@ -10,3 +10,4 @@ D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\BinaryFormatter\obj\Release\BinaryFormatt
 D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\BinaryFormatter\bin\Release\System.Net.Http.dll
 D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\BinaryFormatter\bin\Release\System.Net.Http.xml
 D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\BinaryFormatter\obj\Release\BinaryFormatter.FrmBinaryFormatter.resources
+D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\BinaryFormatter\obj\Release\BinaryFormatter.csproj.CopyComplete

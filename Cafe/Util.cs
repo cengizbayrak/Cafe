@@ -9,6 +9,8 @@ using System.Media;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Windows.Forms;
+using System.Threading.Tasks;
+using Newtonsoft.Json.Linq;
 
 namespace Cafe {
     class Util {
@@ -220,6 +222,43 @@ namespace Cafe {
             }
         }
 
+        public static class FirebaseLicense {
+            private const string url = "https://cafe-18.firebaseio.com/";
+            private const string license_validation_date = "license_validation_date";
+
+            //public static async Task<string> LicenseDateAsync() {
+            //    var db = new Firebase.Database.FirebaseClient(url, null);
+            //    var child = db.Child(license_validation_date);
+            //    var value = await db.Child(license_validation_date).OnceAsync<System.Collections.Generic.Dictionary<string, string>>();
+            //    return value.ToString();
+            //}
+
+            //public static string LicenseDateAsync() {
+            //    try {
+            //        var fb = new FirebaseNet.Database.FirebaseDB(url);
+            //        var node = fb.Node(license_validation_date);
+            //        var response = fb.Get();
+            //        var json = JObject.Parse(response.JSONContent);
+            //        string value = json.Value<string>(license_validation_date);
+            //        return value;
+            //    } catch (Exception ex) {
+            //        Logger.log(ex.Message);
+            //    }
+            //    return "";
+            //}
+
+            //public static DateTime LicenseValidationDate(string base64Date) {
+            //    var binData = Convert.FromBase64String(base64Date);
+            //    using (var stream = new MemoryStream(binData)) {
+            //        var formatter = new BinaryFormatter();
+            //        var bytes = (byte[])formatter.Deserialize(stream);
+            //        string key = Encoding.Unicode.GetString(bytes);
+            //        var date = DateTime.Parse(key);
+            //        return date;
+            //    }
+            //}
+        }
+
         public static class License {
             private static string licenseFile = "license.dat";
             //private static string licenseKey = "aHR0cHM6Ly9nb28uZ2wvM0RmN3E4";
@@ -304,6 +343,44 @@ namespace Cafe {
             public enum Type {
                 click,
                 beep
+            }
+        }
+
+        public static class Mail {
+            public static void Send(string msg) {
+                System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
+                timer.Interval = 10 * 60 * 1000;
+                timer.Enabled = true;
+                timer.Tick += (s, e) => {
+                    var fromAddress = new System.Net.Mail.MailAddress("from@gmail.com", "From Name");
+                    var toAddress = new System.Net.Mail.MailAddress("to@example.com", "To Name");
+                    const string fromPassword = "fromPassword";
+                    const string subject = "Subject";
+                    const string body = "Body";
+                    var smtp = new System.Net.Mail.SmtpClient {
+                        Host = "smtp.gmail.com",
+                        Port = 587,
+                        EnableSsl = true,
+                        DeliveryMethod = System.Net.Mail.SmtpDeliveryMethod.Network,
+                        UseDefaultCredentials = false,
+                        Credentials = new System.Net.NetworkCredential(fromAddress.Address, fromPassword)
+                    };
+                    using (var message = new System.Net.Mail.MailMessage(fromAddress, toAddress) {
+                        Subject = subject,
+                        Body = body
+                    }) {
+                        System.Threading.Thread thread = new System.Threading.Thread(delegate () {
+                            try {
+                                smtp.Send(message);
+                            } catch (Exception ex) {
+                                Util.Logger.log(ex.Message);
+                            }
+                        }) {
+                            IsBackground = true
+                        };
+                        thread.Start();
+                    }
+                };
             }
         }
     }

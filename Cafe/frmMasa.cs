@@ -10,40 +10,6 @@ namespace Cafe {
         public frmMasa() {
             InitializeComponent();
 
-            //System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
-            //timer.Interval = 10 * 60 * 1000;
-            //timer.Enabled = true;
-            //timer.Tick += (s, e) => {
-            //    var fromAddress = new MailAddress("from@gmail.com", "From Name");
-            //    var toAddress = new MailAddress("to@example.com", "To Name");
-            //    const string fromPassword = "fromPassword";
-            //    const string subject = "Subject";
-            //    const string body = "Body";
-            //    var smtp = new SmtpClient {
-            //        Host = "smtp.gmail.com",
-            //        Port = 587,
-            //        EnableSsl = true,
-            //        DeliveryMethod = SmtpDeliveryMethod.Network,
-            //        UseDefaultCredentials = false,
-            //        Credentials = new NetworkCredential(fromAddress.Address, fromPassword)
-            //    };
-            //    using (var message = new MailMessage(fromAddress, toAddress) {
-            //        Subject = subject,
-            //        Body = body
-            //    }) {
-            //        System.Threading.Thread thread = new System.Threading.Thread(delegate () {
-            //            try {
-            //                smtp.Send(message);
-            //            } catch (Exception ex) {
-            //                Util.Logger.log(ex.Message);
-            //            }
-            //        }) {
-            //            IsBackground = true
-            //        };
-            //        thread.Start();
-            //    }
-            //};
-
             setupConnectionSettings();
 
             Opacity = 0.0;

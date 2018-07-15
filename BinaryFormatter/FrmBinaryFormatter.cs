@@ -16,7 +16,7 @@ namespace BinaryFormatter {
                     return;
                 }
                 byte[] binData = Convert.FromBase64String(rtxtBinary.Text);
-                System.Runtime.Serialization.Formatters.Binary.BinaryFormatter formatter = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
+                var formatter = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
                 MemoryStream ms = new MemoryStream(binData);
                 var bytes = (byte[])formatter.Deserialize(ms);
                 rtxtPlain.Text = Encoding.Unicode.GetString(bytes);
@@ -26,7 +26,7 @@ namespace BinaryFormatter {
                     return;
                 }
                 MemoryStream streamMemory = new MemoryStream();
-               System.Runtime.Serialization.Formatters.Binary. BinaryFormatter formatter = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
+                var formatter = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
                 var bytes = Encoding.Unicode.GetBytes(rtxtPlain.Text);
                 formatter.Serialize(streamMemory, bytes);
                 rtxtBinary.Text = Convert.ToBase64String(streamMemory.GetBuffer());
