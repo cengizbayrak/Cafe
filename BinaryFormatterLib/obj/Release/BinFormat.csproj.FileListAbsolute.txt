@@ -2,7 +2,8 @@ D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\BinaryFormatterLib\bin\Release\BinFormat.
 D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\BinaryFormatterLib\bin\Release\BinFormat.pdb
 D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\BinaryFormatterLib\bin\Release\System.Net.Http.dll
 D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\BinaryFormatterLib\bin\Release\System.Net.Http.xml
-D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\BinaryFormatterLib\obj\Release\BinFormat.csprojResolveAssemblyReference.cache
 D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\BinaryFormatterLib\obj\Release\BinFormat.csproj.CoreCompileInputs.cache
 D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\BinaryFormatterLib\obj\Release\BinFormat.dll
 D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\BinaryFormatterLib\obj\Release\BinFormat.pdb
+D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\BinaryFormatterLib\obj\Release\BinFormat.csprojResolveAssemblyReference.cache
+D:\Google Drive\Bdy Cafe\Cafe AIO\Cafe\BinaryFormatterLib\obj\Release\BinFormat.csproj.CopyComplete

@@ -320,7 +320,7 @@
             this.Controls.Add(this.pnl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAdisyon";
-            this.Text = "Form2";
+            this.Text = "Adisyon";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.pnl.ResumeLayout(false);
             this.pnl.PerformLayout();

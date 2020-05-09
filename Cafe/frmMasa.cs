@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Configuration;
 using System.Data.SqlClient;
-using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 
@@ -98,6 +94,7 @@ namespace Cafe {
                             }
                         }
                     } catch (Exception ex) {
+                        Util.Logger.log(ex.Message);
                     }
                 } catch (Exception) {
                 }
@@ -145,7 +142,7 @@ namespace Cafe {
                 }
                 var btn = new CustomButton((i + 1).ToString(),
                     (s, e) => {
-                        Util.Sound.playClick();
+                        Util.Sound.play(Util.Sound.Type.click);
 
                         Button b = s as Button;
                         int masa = int.Parse(b.Text);
