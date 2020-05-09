@@ -1,0 +1,197 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="cardViewStyle" parent="CardView">
+        <item name="cardBackgroundColor">@color/cardviewBackgroundColor</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+        <item name="android:minHeight">60dp</item>
+        <item name="contentPadding">@dimen/cardContentPadding</item>
+        <item name="android:layout_weight">1</item>
+        <!--<item name="android:onClick">onClick</item>-->
+    </style>
+
+    <style name="CardViewStyle" parent="CardView">
+        <item name="cardBackgroundColor">@color/cardviewBackgroundColor</item>
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="contentPadding">@dimen/cardContentPadding</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">false</item>
+        <item name="android:layout_weight">1</item>
+        <!--<item name="android:onClick">onClick</item>-->
+    </style>
+
+    <style name="CardViewStyle.Landscape">
+        <item name="contentPadding">@dimen/cardContentPadding_small</item>
+    </style>
+
+    <style name="CardViewStyle.sw600">
+        <item name="contentPadding">@dimen/cardContentPadding_small</item>
+    </style>
+
+    <style name="CardViewStyle.sw600.right">
+        <item name="android:layout_marginLeft">@dimen/margin_large</item>
+        <item name="android:layout_marginStart">@dimen/margin_large</item>
+    </style>
+
+    <style name="cardViewStyle.Portrait_sw600dp">
+        <item name="android:minHeight">100dp</item>
+    </style>
+
+    <style name="cardViewStyle.Portrait_sw720dp">
+        <item name="android:minHeight">150dp</item>
+    </style>
+
+
+    <style name="imageViewStyle" parent="AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:focusable">false</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:minHeight">100dp</item>
+    </style>
+
+    <style name="inputTextViewStyle" parent="AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">#1b1725</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:minLines">1</item>
+        <item name="android:focusable">false</item>
+    </style>
+
+    <style name="popup_linearLayout" parent="AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_margin">@dimen/margin_medium</item>
+        <item name="android:padding">@dimen/padding_medium</item>
+    </style>
+
+    <style name="popup_linearLayout.small">
+        <item name="android:layout_margin">@dimen/margin_small</item>
+        <item name="android:padding">@dimen/padding_small</item>
+    </style>
+
+    <style name="popup_linearLayout.medium">
+        <item name="android:layout_margin">@dimen/margin_medium</item>
+        <item name="android:padding">@dimen/padding_medium</item>
+    </style>
+
+    <style name="popup_linearLayout.large">
+        <item name="android:layout_margin">@dimen/margin_large</item>
+        <item name="android:padding">@dimen/padding_large</item>
+    </style>
+
+    <style name="popup_linearLayout.xlarge">
+        <item name="android:layout_margin">@dimen/margin_xlarge</item>
+        <item name="android:padding">@dimen/padding_xlarge</item>
+    </style>
+
+    <style name="style_popup_title" parent="AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:text">Adisyon ve Masa Bilgisi</item>
+        <item name="android:textColor">@color/gray</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/textSize_popupTitle</item>
+    </style>
+
+    <style name="style_popup_title.medium">
+        <item name="android:textSize">@dimen/textSize_popupTitle</item>
+
+    </style>
+
+    <style name="style_popup_title.large">
+        <item name="android:textSize">@dimen/textSize_popupTitle_sw600</item>
+
+    </style>
+
+    <style name="style_popup_title.xlarge">
+        <item name="android:textSize">@dimen/textSize_popupTitle_sw720</item>
+
+    </style>
+
+    <style name="style_popup_icon">
+        <item name="android:layout_width">@dimen/iconSize_popupMessage</item>
+        <item name="android:layout_height">@dimen/iconSize_popupMessage</item>
+        <item name="android:layout_marginRight">@dimen/margin_medium</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="srcCompat">@drawable/ic_check_black_24dp</item>
+    </style>
+
+    <style name="style_popup_icon.medium">
+        <item name="android:layout_width">@dimen/iconSize_popupMessage</item>
+        <item name="android:layout_height">@dimen/iconSize_popupMessage</item>
+    </style>
+
+    <style name="style_popup_icon.large">
+        <item name="android:layout_width">@dimen/iconSize_popupMessage_sw600</item>
+        <item name="android:layout_height">@dimen/iconSize_popupMessage_sw600</item>
+    </style>
+
+    <style name="style_popup_icon.xlarge">
+        <item name="android:layout_width">@dimen/iconSize_popupMessage_sw720</item>
+        <item name="android:layout_height">@dimen/iconSize_popupMessage_sw720</item>
+    </style>
+
+    <style name="style_popup_message" parent="AppTheme">
+        <item name="android:layout_marginTop">@dimen/marginBetweenTitleMessage_small</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textColor">@color/gray</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:text">
+            @string/addition_table_info_sent_successfully_order_brought_to_you_bon_appetit
+        </item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/textSize_popupMessage</item>
+    </style>
+
+    <style name="style_popup_message.medium">
+        <item name="android:layout_marginTop">@dimen/marginBetweenTitleMessage_medium</item>
+        <item name="android:textSize">@dimen/textSize_popupMessage</item>
+    </style>
+
+    <style name="style_popup_message.large">
+        <item name="android:layout_marginTop">@dimen/marginBetweenTitleMessage_large</item>
+        <item name="android:textSize">@dimen/textSize_popupMessage_sw600</item>
+    </style>
+
+    <style name="style_popup_message.xlarge">
+        <item name="android:layout_marginTop">@dimen/marginBetweenTitleMessage_xlarge</item>
+        <item name="android:textSize">@dimen/textSize_popupMessage_sw720</item>
+    </style>
+
+    <style name="style_toolbar" parent="AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="colorControlNormal">@color/white</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:minHeight">?attr/actionBarSize</item>
+        <item name="android:title">@string/arjantin_cafe</item>
+        <item name="titleTextColor">@color/white</item>
+        <item name="android:theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+    </style>
+
+    <style name="dialog_animation_bottom_bottom">
+        <item name="android:windowEnterAnimation">@anim/slide_in_bottom</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_bottom</item>
+    </style>
+</resources>

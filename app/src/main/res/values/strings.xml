@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name">Cafe</string>
+    <string name="please_enter_addition_number">Lütfen adisyon numaranızı girin!</string>
+    <string name="please_enter_addition_number_UPPER">LÜTFEN ADİSYON NUMARANIZI GİRİN</string>
+    <string name="enterTableNumber">Masa numaranızı girin:</string>
+    <string name="next">İleri</string>
+    <string name="ok">Tamam</string>
+    <string name="send">Gönder</string>
+
+    <string name="your_addition_no">Adisyon no:</string>
+    <string name="your_addition_number">Adisyon numaranız:</string>
+    <string name="your_table_no">Masa no:</string>
+    <string name="your_table_number">Masa numaranız:</string>
+    <string name="arjantin_cafe">Arjantin Cafe</string>
+    <string name="please_enter_table_number">Lütfen masa numaranızı girin!</string>
+    <string name="please_enter_table_number_UPPER">LÜTFEN MASA NUMARANIZI GİRİN</string>
+
+    <string name="server_connection_failed">Sunucu bağlantısı sağlanamadı</string>
+    <string name="server_control">Sunucu Denetimi</string>
+    <string name="server_being_controlled">Sunucu denetimi yapılıyor</string>
+    <string name="server_connection_failed_contact_supervisor">Sunucu bağlantısı sağlanamadı.\nBir yetkiliye başvurun.</string>
+    <string name="server_connection_control_successful">Sunucu bağlantı denetimi başarılı</string>
+    <string name="server_transfer">Sunucuya Gönderim</string>
+    <string name="info_transferring">Bilgiler gönderiliyor</string>
+    <string name="error_occured_during_transfer_please_check_info_try_again">Gönderme sırasında bir hata oluştu.\nLütfen adisyon ve masa bilgilerinizi kontrol edin ve yeniden deneyin.</string>
+    <string name="addition_number_sent_already_please_check_info_try_again">%1$d nolu adisyon işleme alınmış durumda.\nLütfen adisyon ve masa bilgilerinizi kontrol edin ve yeniden deneyin.</string>
+    <string name="addition_table_info_sent_successfully_order_brought_to_you_bon_appetit">%1$d nolu adisyon ve %2$d nolu masa bilginiz iletildi.\nSiparişiniz masanıza getirilecektir.\n\nAfiyet olsun.</string>
+    <string name="addition_table_info">Adisyon ve Masa Bilgisi</string>
+    <string name="please_enter_valid_table_number">Lütfen geçerli bir masa numarası girin!</string>
+    <string name="please_enter_valid_table_number_UPPER">LÜTFEN GEÇERLİ BİR MASA NUMARASI GİRİN</string>
+    <string name="cancel">Vazgeç</string>
+    <string name="cancel_UPPER">VAZGEÇ</string>
+    <string name="retry">Yeniden dene</string>
+    <string name="retry_UPPER">YENİDEN DENE</string>
+
+    <string name="hostname">Hostname</string>
+    <string name="port">Port</string>
+    <string name="instance">Instance</string>
+    <string name="database">Database</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+
+    <string name="get_with_qr_code">QR KOD İLE AL</string>
+    <string name="save_settings">AYARLARI KAYDET</string>
+
+    <string name="connection_settings">Bağlantı Ayarları</string>
+    <string name="bdy">Büyükdoğu Yazılım</string>
+    <string name="youCancelledTheScanOperation">Tarama işlemini yarıda kestiniz</string>
+    <string name="connection_settings_got">Bağlantı ayarları alındı</string>
+    <string name="please_read_qr_code_from_application">Lütfen uygulama içerisindeki QR kodu okutun</string>
+    <string name="can_not_be_empty">Boş olamaz</string>
+    <string name="connection_settings_saved">Bağlantı ayarları kaydedildi</string>
+    <string name="go_back_to_addition_number">Adisyon numarasına dön</string>
+    <string name="table_search">Masa Bulma</string>
+    <string name="table_searching">Masa aranıyor</string>
+    <string name="addition_number_table_number">Masa no: %1$d\nAdisyon no: %2$d</string>
+    <string name="table_number_not_found">Masa numarası bulunamadı.</string>
+
+    <string name="find_table">Masa Bul</string>
+    <string name="find">Bul</string>
+    <string name="about">Hakkında</string>
+    <string name="feature_needs_camera">Bu özellik için kamera gerekmektedir! Cihazınızda kamera bulunmuyor!</string>
+    <string name="all_input_cleared">Tüm girdi silindi</string>
+</resources>

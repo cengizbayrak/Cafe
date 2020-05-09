@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="cardContentPadding_small">3dp</dimen>
+    <dimen name="cardContentPadding">10dp</dimen>
+    <dimen name="cardNotFirstMargin">20dp</dimen>
+
+    <dimen name="margin_between_number_rows">20dp</dimen>
+
+    <dimen name="cardMinHeight_sw720">150dp</dimen>
+
+    <dimen name="margin_small">5dp</dimen>
+    <dimen name="margin_medium">10dp</dimen>
+    <dimen name="margin_large">20dp</dimen>
+    <dimen name="margin_xlarge">20dp</dimen>
+
+    <dimen name="padding_small">5dp</dimen>
+    <dimen name="padding_medium">10dp</dimen>
+    <dimen name="padding_large">20dp</dimen>
+    <dimen name="padding_xlarge">20dp</dimen>
+
+    <dimen name="marginBetweenTitleMessage_small">5dp</dimen>
+    <dimen name="marginBetweenTitleMessage_medium">10dp</dimen>
+    <dimen name="marginBetweenTitleMessage_large">20dp</dimen>
+    <dimen name="marginBetweenTitleMessage_xlarge">20dp</dimen>
+
+    <dimen name="textSize_popupTitle">20sp</dimen>
+    <dimen name="textSize_popupTitle_sw600">40sp</dimen>
+    <dimen name="textSize_popupTitle_sw720">50sp</dimen>
+
+    <dimen name="textSize_popupMessage">16sp</dimen>
+    <dimen name="textSize_popupMessage_sw600">36sp</dimen>
+    <dimen name="textSize_popupMessage_sw720">46sp</dimen>
+
+    <dimen name="iconSize_popupMessage">20dp</dimen>
+    <dimen name="iconSize_popupMessage_sw600">40dp</dimen>
+    <dimen name="iconSize_popupMessage_sw720">48dp</dimen>
+</resources>

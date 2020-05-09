@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    android:baselineAligned="false"
+    android:keepScreenOn="true"
+    android:orientation="vertical"
+    tools:context="com.bdy.cafe.MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_mainActivity"
+        style="@style/style_toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_xlarge">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView_mainActivity_inputInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/your_addition_no"
+                android:textColor="@android:color/white"
+                android:textSize="80sp"
+                android:textStyle="bold"
+                android:typeface="sans" />
+
+            <TextView
+                android:id="@+id/textView_mainActivity_input"
+                style="@style/inputTextViewStyle"
+                android:textSize="140sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/padding_xlarge"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cardView_mainActivity_one"
+                    style="@style/CardViewStyle">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        style="@style/imageViewStyle"
+                        app:srcCompat="@drawable/ic_number_one" />
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cardView_mainActivity_two"
+                    style="@style/CardViewStyle"
+                    android:layout_marginLeft="@dimen/padding_xlarge"
+                    android:layout_marginStart="@dimen/padding_xlarge">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        style="@style/imageViewStyle"
+                        app:srcCompat="@drawable/ic_number_two" />
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cardView_mainActivity_three"
+                    style="@style/CardViewStyle"
+                    android:layout_marginLeft="@dimen/padding_xlarge"
+                    android:layout_marginStart="@dimen/padding_xlarge">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        style="@style/imageViewStyle"
+                        app:srcCompat="@drawable/ic_number_three" />
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/padding_xlarge"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cardView_mainActivity_four"
+                    style="@style/CardViewStyle">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        style="@style/imageViewStyle"
+                        app:srcCompat="@drawable/ic_number_four" />
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cardView_mainActivity_five"
+                    style="@style/CardViewStyle"
+                    android:layout_marginLeft="@dimen/padding_xlarge"
+                    android:layout_marginStart="@dimen/padding_xlarge">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        style="@style/imageViewStyle"
+                        app:srcCompat="@drawable/ic_number_five" />
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cardView_mainActivity_six"
+                    style="@style/CardViewStyle"
+                    android:layout_marginLeft="@dimen/padding_xlarge"
+                    android:layout_marginStart="@dimen/padding_xlarge">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        style="@style/imageViewStyle"
+                        app:srcCompat="@drawable/ic_number_six" />
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/padding_xlarge"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cardView_mainActivity_seven"
+                    style="@style/CardViewStyle">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        style="@style/imageViewStyle"
+                        app:srcCompat="@drawable/ic_number_seven" />
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cardView_mainActivity_eight"
+                    style="@style/CardViewStyle"
+                    android:layout_marginLeft="@dimen/padding_xlarge"
+                    android:layout_marginStart="@dimen/padding_xlarge">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/appCompatImageView"
+                        style="@style/imageViewStyle"
+                        app:srcCompat="@drawable/ic_number_eight" />
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cardView_mainActivity_nine"
+                    style="@style/CardViewStyle"
+                    android:layout_marginLeft="@dimen/padding_xlarge"
+                    android:layout_marginStart="@dimen/padding_xlarge">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        style="@style/imageViewStyle"
+                        app:srcCompat="@drawable/ic_number_nine" />
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/padding_xlarge"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cardView_mainActivity_zero"
+                    style="@style/CardViewStyle">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        style="@style/imageViewStyle"
+                        app:srcCompat="@drawable/ic_number_zero" />
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cardView_mainActivity_backspace"
+                    style="@style/CardViewStyle"
+                    android:layout_marginLeft="@dimen/padding_xlarge"
+                    android:layout_marginStart="@dimen/padding_xlarge">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        style="@style/imageViewStyle"
+                        app:srcCompat="@drawable/ic_backspace" />
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cardView_mainActivity_nextAndOk"
+                    style="@style/CardViewStyle"
+                    android:layout_marginLeft="@dimen/padding_xlarge"
+                    android:layout_marginStart="@dimen/padding_xlarge">
+
+                    <TextView
+                        android:id="@+id/textView_mainActivity_nextAndOk"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="@string/next"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="66sp"
+                        android:textStyle="bold" />
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
